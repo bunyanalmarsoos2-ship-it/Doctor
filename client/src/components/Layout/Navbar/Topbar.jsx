@@ -14,6 +14,10 @@ const Topbar = () => {
           {" "}
           <i class="fa-solid fa-envelope"></i> help@zainmath.com
         </h6>
+        <h6>
+          {" "}
+          <i class="fa-solid fa-caret-down"></i> English
+        </h6>
       </div>
     </>
   );
