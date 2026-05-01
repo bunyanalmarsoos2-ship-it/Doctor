@@ -20,7 +20,7 @@ const Slider = () => {
         spaceBetween={10}
         slidesPerView={1}
         loop={true}
-        autoplay={{ delay: 1000, disableOnInteraction: false }}
+        autoplay={{ delay: 2000, disableOnInteraction: false }}
       >
         {images.map((d, i) => (
           <SwiperSlide key={i}>
