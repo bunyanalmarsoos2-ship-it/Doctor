@@ -13,6 +13,7 @@ const Home = () => {
       <ShortIntro />
       <WhyChoose />
       <ContactMessage/>
+      
     </>
   );
 };
