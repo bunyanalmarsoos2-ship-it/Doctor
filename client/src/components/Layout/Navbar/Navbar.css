@@ -1,10 +1,12 @@
 .navbar-container {
   border-bottom: 1px solid rgba(128, 128, 128, 0.17);
+  background: #fff;
 }
 .topbar-container {
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding: 8px;
   justify-content: space-evenly;
   background-color: #008080;
   color: #fff;
@@ -20,8 +22,9 @@
   margin-left: 20px;
 }
 .brand-logo {
-  width: 100%;
-  height: 110px;
+  width: 70%;
+  margin-left: 40px;
+  height: 130px;
 }
 .brand-logo:hover {
   opacity: 0.9;
