@@ -1,0 +1,32 @@
+.intro-container {
+  margin: 30px 0px;
+  overflow: hidden;
+}
+.img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hos-image {
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: -5px 5px 5px gray;
+}
+
+
+.intro-container .info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-right: 50px;
+}
+.info-container h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.img-container h6 {
+  color: rgba(0, 0, 0, 0.836);
+  margin-bottom: 30px;
+}
