@@ -1,0 +1,42 @@
+import React from "react";
+import { DoctorsData } from "./DoctorsData.js";
+import { NavLink } from "react-router-dom";
+import "./AllDoctors.css";
+const AllDoctors = () => {
+  return (
+    <>
+      
+      <div className="container doc-container">
+        <h4 className="text-center text-success mt-3">
+        Select a doctor and book your appointment online now!
+      </h4>
+        {DoctorsData.map((d, i) => (
+          <div className="card" key={i} style={{ width: "15rem" }}>
+            <NavLink to={`/doctors/${d.id}`}>
+              <img
+                src={d.pic}
+                alt="picture"
+                width={150}
+                height={150}
+                className="card-image-top"
+              />
+              <div className="card-body">
+                <h6>{d.name}</h6>
+                <p>{d.degree}</p>
+              </div>
+              <div className="card-footer">
+                <p>
+                  <i className={d.icon}></i> {" "}{d.speciality}
+                </p>
+              </div>
+            </NavLink>
+          </div>
+        ))}
+      </div>
+    </>
+  );
+};
+
+export default AllDoctors;
+
+

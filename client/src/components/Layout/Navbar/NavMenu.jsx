@@ -1,10 +1,11 @@
-import React from "react";
-import {NavLink} from 'react-router-dom'
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 const NavMenu = () => {
+  const [user, setUser] = useState(true);
   return (
     <>
       <nav className="navbar navbar-expand-lg">
-         <div className="container-fluid">
+        <div className="container-fluid">
           <button
             className="navbar-toggler"
             type="button"
@@ -17,7 +18,6 @@ const NavMenu = () => {
             <span className="navbar-toggler-icon" />
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-            
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <NavLink className="nav-link active" aria-current="page" to="/">
@@ -25,33 +25,67 @@ const NavMenu = () => {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link active" aria-current="page" to="/about">
+                <NavLink
+                  className="nav-link active"
+                  aria-current="page"
+                  to="/about"
+                >
                   About
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link active" aria-current="page" to="/doctors">
+                <NavLink
+                  className="nav-link active"
+                  aria-current="page"
+                  to="/doctors"
+                >
                   Doctors
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link active" aria-current="page" to="/gallery">
+                <NavLink
+                  className="nav-link active"
+                  aria-current="page"
+                  to="/gallery"
+                >
                   Gallery
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link active" aria-current="page" to="/contact">
+                <NavLink
+                  className="nav-link active"
+                  aria-current="page"
+                  to="/contact"
+                >
                   Contact
                 </NavLink>
               </li>
-              
             </ul>
             <form className="d-flex" role="search">
-              
               <button className="btn btn-outline-success" type="submit">
                 Book An Appointment
               </button>
             </form>
+            {/* login user */}
+            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+              {user ? <li className="nav-item">
+                <NavLink
+                  className="nav-link active"
+                  aria-current="page"
+                  to="/user/profile"
+                >
+                  My Account
+                </NavLink>
+              </li> : <li className="nav-item">
+                <NavLink
+                  className="nav-link active"
+                  aria-current="page"
+                  to="/login"
+                >
+                  LOGIN
+                </NavLink>
+              </li>}
+            </ul>
           </div>
         </div>
       </nav>
