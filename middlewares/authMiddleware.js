@@ -27,7 +27,7 @@ export const userAuth = async (req, res, next) => {
 export const isAdmin = async (req, res, next) => {
   try {
     const user = await userModel.findById(req.user.id);
-    if (!user.isAdmin === !true) {
+    if (!user.isAdmin === true) {
       return res.status(402).send({
         success: false,
         message: "Unauthorized Access",

@@ -6,6 +6,8 @@ import cors from "cors";
 import testRoutes from "./routes/testRoutes.js";
 import connectDB from "./config/db.js";
 import userRoutes from "./routes/userRoutes.js";
+import webMessageRoutes from './routes/webMessageRoutes.js'
+
 
 // config dotenv
 dotenv.config();
@@ -27,6 +29,8 @@ app.get("/", (req, res) => {
 
 app.use("/api/v1/test", testRoutes);
 app.use("/api/v1/user", userRoutes);
+app.use("/api/v1/message", webMessageRoutes);
+
 // port
 const PORT = process.env.PORT || 8000;
 
